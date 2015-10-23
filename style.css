@@ -1,0 +1,368 @@
+/*
+*
+* Theme Name:lessStyle
+* Author:woly shaw
+* Author URI:http://xwlong.com/
+* Version:1.0
+* Description:个人主题简介风格。
+* keywords:简洁,白色
+*
+*/
+
+/* 全局css */
+html,body,div,p,ol,ul,li,dl,dt,dd,h1,h2,h3,h4,h5,h6,form,input,select,button,textarea,iframe,table,th,td,blockquote{
+    margin:0;padding:0;
+}
+input,textarea,button{
+    outline:none;
+}
+input[type^="text"],input[type^="password"],textarea {
+    border:0 none;
+}
+input:focus,textarea:focus {}
+input{
+    vertical-align:middle;
+}
+input[type^="radio"]{
+    border: none;
+    background: none;
+    width: auto;
+}
+blockquote{
+    background: #F6F6F6;
+    border: 1px solid #EAEAEA;
+    font-style: italic;
+    line-height: 21px;
+    margin: 4px 0 17px;
+    overflow: hidden;
+    padding: 8px 6px;
+}
+html body{
+    color: #707070;
+    font: 14px/1.5 "Open Sans", Arial, "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", "STHeiti", "WenQuanYi Micro Hei", SimSun, sans-serif;
+    background-color: rgb(255,255,255);
+    overflow-x: hidden;
+    font-weight: inherit;
+    -webkit-font-smoothing: antialiased;
+}
+pre,code{
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    margin: 0 0 1.75em 0;
+    border: #E3EDF3 1px solid;
+    width: 100%;
+    padding: 10px;
+    font-family: Inconsolata, monospace, sans-serif;
+    font-size: 0.9em;
+    white-space: pre;
+    overflow: auto;
+    background: #F7FAFB;
+    border-radius: 3px;
+}
+img{
+    max-width: 100%;
+    height: auto;
+    border: none;
+}
+a{
+    text-decoration: none;
+    color: rgba(0,0,0,.7);
+}
+.clearfix:after{
+    content: "";
+    display: block;
+    clear:both;
+}
+.clearfix{
+    zoom: 1;
+}
+.comWidth{
+    max-width: 1024px;
+    margin: 0 auto;
+}
+.fl{
+    float: left;
+}
+.fr{
+    float: right;
+}
+
+/* 加入字体图标 */
+@font-face {font-family: 'iconfont';
+    src: url('fonts/iconfont.eot'); /* IE9*/
+    src: url('fonts/iconfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+    url('fonts/iconfont.woff') format('woff'), /* chrome、firefox */
+    url('fonts/iconfont.ttf') format('truetype'), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+    url('fonts/iconfont.svg#iconfont') format('svg'); /* iOS 4.1- */
+}
+.iconfont{
+    font-family:"iconfont" !important;
+    font-size:16px;font-style:normal;
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-stroke-width: 0.2px;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* 自适应样式 */
+@media screen and (max-width:1024px){
+    .allPost,.content,.nextPage,.footer{
+        margin: auto 3%!important;
+    }
+    .nextPage a{
+        margin: 15px auto;
+    }
+    .singlePost{
+        padding: 0 3%;
+    }
+}
+@media screen and (max-width:800px){
+    .userBox{
+        display: none;
+    }
+    .headerCon{
+        max-width: 92%!important;
+    }
+}
+@media screen and (max-width:750px){
+    .topNav{
+        display: none;
+    }
+    .logo{
+        margin-right: auto!important;
+        width: 300px;
+        margin: 0 auto;
+        float: inherit;
+    }
+}
+
+/* header css */
+.header{
+    border-bottom: 1px solid #e5e5e5;
+    width: 100%;
+    height: 60px;
+}
+.logo{
+    margin-right: 15px;
+}
+.logo p,.logo img{
+    display: inline-block;
+    float: left;
+    height: 60px;
+    line-height: 60px;
+    color: #b3b3b3;
+}
+.topNav{
+    margin: auto 15px;
+}
+.topNav li{
+    list-style: none;
+    float: left;
+    margin: auto 15px;
+    text-align: center;
+    height: 57px;
+    line-height: 60px;
+    font-weight: 300;
+}
+.topNav li a,.userBox a{
+
+}
+.current-menu-item,.current-menu-parent{
+    border-bottom: 3px solid rgba(0,0,0,.7);
+}
+.current-menu-item a,.current-menu-parent a{
+    color: rgba(0,0,0,.9)
+}
+.userBox{
+    height: 60px;
+    line-height: 60px;
+}
+.userBox span{
+    margin: 0 10px;
+    color: #b3b3b3;
+}
+.loginBox{
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 1px solid #eee;
+    box-shadow: 0 0 10px #eee;
+    background-color: rgba(255,255,255,.88);
+    z-index: 9999;
+    border-radius: 3px;
+    text-align: center;
+}
+.login{
+    margin: 15% auto;
+    width: 100%;
+}
+.loginBox form{
+    width: 100%;
+    margin-bottom: 30px;
+}
+.login input[type^="text"],.login input[type^="password"]{
+    border: 1px solid #ccc;
+    margin: 10px auto;
+    padding: 5px 15px;
+    border-radius: 2px;
+}
+.loginBtn{
+    background-color: #2e9fff;
+    box-shadow: none;
+    border: none;
+    color: #fff;
+    border-radius: 3px;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+.closeLogin{
+    display: inline-block;
+    transition: all ease 0.2s;
+    -webkit-transition: all ease 0.2s;
+    -moz-transition: all ease 0.2s;
+    -o-transition: all ease 0.2s;
+}
+.closeLogin:hover{
+    transform: rotateZ(180deg);
+    -webkit-transform: rotateZ(180deg);
+    -moz-transform: rotateZ(180deg);
+    -o-transform: rotateZ(180deg);
+}
+.closeLogin i{
+    font-size: 32px;
+    color: #ccc;
+}
+/* 首页文章循环样式 */
+
+.allPost{
+    margin: 25px auto;
+    padding: 15px 0;
+    border-bottom: 1px solid #eee;
+}
+.allPost .postInfo{
+    margin: 0 25px;
+}
+.postItem{
+    padding: 40px 0;
+    border-bottom: 1px solid #f2f2f2;
+}
+.metaInfo{
+    border-bottom: 1px solid #f2f2f2;
+    padding: 15px 0;
+}
+.postTitle{
+    font-weight: inherit;
+    color: rgba(0,0,0,.7);
+}
+.postTitle a{
+
+}
+.postimg{
+    margin-right: 30px;
+}
+.postimg img{
+    width: 200px;
+    height: 150px;
+}
+.postCon,{
+    width: auto;
+    display: inline;
+}
+.postInfo{
+    margin: 15px auto;
+    display: block;
+    color: #b3b3b3;
+}
+.postExcerpt{
+    color: gray;
+    line-height: 1.6em;
+}
+.postHot p{
+    display: block;
+    height: 110px;
+    text-align: center;
+    line-height: 110px;
+}
+.pegeIndex{
+    margin: 30px auto;
+    font-size: 2em;
+    letter-spacing: 3px;
+}
+
+.nextPage{
+    text-align: center;
+    margin: 20px auto;
+}
+.nextPage a{
+    display: inline-block;
+    padding: 15px 25px;
+    border: 1px solid #eee;
+    border-radius: 3px;
+}
+/* 文章内页样式 */
+.singlePost{
+    margin: 40px auto;
+}
+.singlePost p{
+    line-height: 1.8em;
+}
+.divTime{
+    border: 1px solid rgba(0, 0, 0, .5);
+    border-radius: 5px;
+    padding: 8px 20px;
+    width: auto;
+    margin: 20px auto;
+}
+.divTime i{
+    margin-right: 10px;
+}
+#disqus_thread{
+    margin-top: 40px;
+}
+
+/* 弹出式搜索框 */
+.searchBox{
+    display: none;
+    background-color: #fff;
+    border: 1px solid #eee;
+    width: 60%;
+    height: 80%;
+    position: fixed;
+    top: 150px;
+    left: 300px;
+    box-shadow: 0 0 10px #eee;
+}
+.searchBox form{
+    width: 75%;
+    margin: 20px auto;
+    border: 1px solid #eee;
+}
+.searchBoxInput{
+    padding: 8px 15px;
+    font-size: 1em;
+    width: 100%;
+}
+.searchBoxPost{
+    width: 75%;
+    margin: 0 auto;
+}
+.searchBoxPostItem{
+    margin: 30px auto;
+}
+/* 页面 */
+.pageCon{
+    margin: 50px auto;
+}
+.desSpan{
+    margin:auto  20px;
+    color: #b3b3b3;
+}
+.footer{
+    border-top: 1px solid #e5e5e5;
+    margin: 35px auto;
+    padding: 35px 15px;
+    text-align: center;
+}
